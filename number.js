@@ -14,8 +14,10 @@ for (var i = 0; i < array.length; i+=3){
         red.push(array[i]);
     }
 }
+//Create sorting function
+sorting = function(a, b){return a-b};
 //Sort in ascending order
-red.sort(function(a, b){return a-b});
+red.sort(sorting);
 //Position 2 is yellow
 for (var i = 1; i < array.length; i+=3){
     //Remove odd numbers
@@ -24,7 +26,7 @@ for (var i = 1; i < array.length; i+=3){
     }
 }
 //Sort in ascending order
-yellow.sort(function(a, b){return a-b});
+yellow.sort(sorting);
 //Position 3 is white
 for (var i = 2; i < array.length; i+=3){
     //Remove if divisible by 3
@@ -33,7 +35,7 @@ for (var i = 2; i < array.length; i+=3){
     }
 }
 //Sort in ascending order
-white.sort(function(a, b){return a-b});
+white.sort(sorting);
 //red < yellow < white
 results = red.concat(yellow, white);
 //Display results
